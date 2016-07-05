@@ -1,0 +1,38 @@
+.round-element(@width){
+	max-width: @width;
+	max-height: @width;
+	width: @width;
+	min-height: @width;
+	border-radius: 50%; 
+}
+
+.white-border-solid(@width: 1px){
+	border: @width solid white;
+}
+
+.init-background-image(@bgurl, @repeat: no-repeat, @position: center, @size: auto 100%){
+	background-image: url(@bgurl);
+	background-repeat: @repeat;
+	background-position: @position;
+	background-size: @size;
+}
+
+.init-background-gradient(@deg, @colorstart, @colorend){
+	background-image:-moz-linear-gradient(@deg, @colorstart, @colorend, @colorend);
+	background-image:-webkit-linear-gradient(@deg, @colorstart, @colorend, @colorend);
+	background-image:-o-linear-gradient(@deg, @colorstart, @colorend, @colorend);
+	background-image:linear-gradient(@deg, @colorstart, @colorend, @colorend);
+}
+
+.init-font(@fontfamily, @fontsize, @fontweight, @letterspacing, @texttransform, @color){
+	font-family: @fontfamily;
+	font-size: @fontsize;
+	font-weight: @fontweight;
+	letter-spacing: @letterspacing;
+	text-transform: @texttransform;
+	color: @color;
+}
+
+.init-rgba-color(@color, @opacity: 1){
+  	@rgba: rgba( red(@color), green(@color), blue(@color), @opacity );
+}

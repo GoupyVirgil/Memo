@@ -1,0 +1,14 @@
+.fontFace (@fontname, @fontfile, @fontweight: normal, @fontstyle: normal) {
+  @font-face {
+    font-family: @fontname;
+    src: url('../../fonts/@{fontfile}.woff') format('woff'),
+         url('../../fonts/@{fontfile}.ttf') format('truetype');    
+    font-weight: @fontweight;
+    font-style: @fontstyle;
+  }
+}
+
+
+.fontFace('GothamMedium', 'Gotham-Medium');
+.fontFace('QuicksandBold', 'Quicksand-Bold');
+.fontFace('QuicksandLight', 'Quicksand-Light');

@@ -1,0 +1,102 @@
+header{
+	height: 50px;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	padding: 10px 20px;
+	display: inline-block;
+	z-index: 1;
+
+	img{
+		width: 100%;
+		height: 100%;
+	}
+
+	@media @large{
+		max-width: 1120px;
+	    margin: 0 auto;
+		right: 0;
+		left: 0;
+	}
+}
+
+.header-nav-desktop{
+	display: none;
+
+	li{
+		display: inline-block;
+		margin-right: 20px;
+		padding-top: 7px;
+
+		&:last-child{
+			margin-right: 0px;
+		}
+
+		&:hover{
+			border-bottom : 2px solid @blue-sky;
+		}
+	}
+
+	li a{
+		.init-font('GothamMedium', 18px, normal, -2px, uppercase, @white);
+		line-height: 30px;
+	}
+
+	@media @medium{
+		display: inline-block;
+		float: right;
+	}
+}
+
+.header-logo{
+	display: inline-block;
+	height: 30px;
+	width: 90px;
+}
+
+.header-menu{
+	float: right;
+	display: inline-block;
+	margin-top: 5px;
+	width: 30px;
+	height: 25px;
+	.init-background-image('../img/icons/menu-lines-large.png', @repeat: no-repeat, @position: center center, @size: auto 25px);
+
+	@media @medium{
+		display: none;
+	}
+}
+
+.header-nav{
+	padding-left: 15px;
+	padding-top: 50px;
+	display: none;
+	text-align: left;
+	width: 45%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	.init-rgba-color(@white, 0.7);
+	background-color: @rgba;
+    z-index: 3;
+
+	li a{
+		.init-font('GothamMedium', 18px, bold, -2px, uppercase, @grey-siberian);
+		line-height: 30px;
+	} 
+}
+
+.header-cross{
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	width: 30px;
+	height: 25px;
+	.init-background-image('../img/icons-retina/cross-icon.png', @repeat: no-repeat, @position: center center, @size: auto 25px);
+	img{
+		width: auto;
+		height: 100%;
+	}
+}
+

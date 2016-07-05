@@ -1,0 +1,44 @@
+.main-container{
+	width: 100%;
+	display: block;
+	overflow: auto;
+	
+	@media @large{
+		max-width: 1120px;
+		box-shadow: 0px 10px 15px @grey-snow;
+	    position: absolute;
+	    left: 0;
+	    right: 0;
+	    margin-left: auto;
+	    margin-right: auto;
+	    top: 423px;
+	    padding-bottom: 70px;
+	}
+}
+
+.left-direction-action{
+	left: 10px;
+	.init-background-image('../img/icons/back-arrow-icon.png', @repeat: no-repeat, @position: center center, @size: 100% auto);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/back-arrow-icon.png', @repeat: no-repeat, @position: center center, @size: 100% auto);
+	}
+}
+
+.right-direction-action{
+	right: 10px;
+	.init-background-image('../img/icons/next-arrow-icon.png', @repeat: no-repeat, @position: center center, @size: 100% auto);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/next-arrow-icon.png', @repeat: no-repeat, @position: center center, @size: 100% auto);
+	}
+}
+
+.down-direction-action{
+	right: 15px;
+	.init-background-image('../img/icons/down-arrow-icon.png', @repeat: no-repeat, @position: center center, @size: 100% auto);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/down-arrow-icon.png', @repeat: no-repeat, @position: center center, @size: 100% auto);
+	}
+}

@@ -1,0 +1,135 @@
+.versus-container{
+	height: auto;
+	background-color: @white;
+	position: relative;
+	text-align: center;
+
+	@media @medium{
+		width: 50%;
+		float: left;
+	}
+
+	.intro-ancre-container{
+		position: static;
+	}
+}
+
+.versus-header{
+	.init-rgba-color(@blue-galaxy, 0.7);
+	background-color: @rgba;
+	height: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+.versus-header-action{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 25px;
+	margin-top: 12px;
+}
+
+.versus-date{
+	.init-font('GothamMedium', 20px, bold, -1px, uppercase, @white);
+	padding-top: 15px;
+}
+
+.versus-img{
+	display: block;
+	height: 200px;
+	width: 100%;
+	.init-background-image('../img/backgrounds-retina/versus-background.png', @repeat: no-repeat, @position: center center, @size: 80% auto);
+  	background-size: cover;
+  	position: relative;
+  	position: absolute;
+  	top: 0;
+  	z-index: 1;
+  
+  	&:before{
+	    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		.init-background-gradient(0deg, @white, rgba(0, 0, 255, 0)); 
+	  }
+}
+
+.versus-tournament{
+	display: inline-block;
+	position: relative;
+	padding-top: 190px;
+	.init-font('QuicksandBold', 18px, bold, 2px, uppercase, @grey-siberian);
+	
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 0;
+		width: 80%;
+		height: 2px;
+		margin: 0 10%;	
+		.init-rgba-color(@grey-siberian, 0.2);
+		background-color: @rgba;	
+	}
+}
+
+.versus-match{
+	display: block;
+	margin-top: 40px;
+	position: relative;
+
+	p{
+		.init-font('QuicksandLight', 14px, bold, normal, uppercase, @grey-siberian);
+		line-height: 24px;	
+	}
+
+  	&:before{
+		position: absolute;
+		content: '';
+		display: block;
+		background-color: @black;
+		top: 0px;
+	    width: 15px;
+	    height: 2px;
+	    left: 0;
+    	right: 0;
+    	margin-left: auto;
+    	margin-right: auto;
+	}
+
+	&:after{
+		position: absolute;
+		content: '';
+		top: 20px;
+	    width: 20px;
+	    height: 20px;
+	    left: 0;
+    	right: 0;
+    	margin-left: auto;
+    	margin-right: auto;
+		.init-background-image('../img/icons/black-versus-icon.png', @repeat: no-repeat, @position: center center, @size: cover);
+
+		@media @retina{
+			.init-background-image('../img/icons-retina/black-versus-icon.png', @repeat: no-repeat, @position: center center, @size: cover);
+		}
+  	}
+}
+
+.versus-team{
+	display: inline-block;
+	width: 50%;
+	float: left;
+
+	img{
+		width: 50px;
+		height: 100%;
+	}
+
+	p{
+		.init-font('QuicksandLight', 14px, bold, normal, uppercase, @grey-snow);
+		line-height: 24px;
+	}
+}

@@ -1,0 +1,145 @@
+.team-container{
+	height: auto;
+	background-color: @white;
+	position: relative;
+	text-align: center;
+	overflow: auto;
+
+	@media @medium{
+		float: left;
+	}
+
+	.intro-ancre-container{
+		position: static;
+	}
+}
+
+.team-header{
+	.init-rgba-color(@blue-sky, 0.7);
+	background-color: @rgba;
+	height: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+.team-header-action{
+	display: block;
+	position: absolute;
+	width: 25px;
+	height: 20px;
+	margin-top: 15px;
+
+}
+
+.team-name{
+	.init-font('GothamMedium', 20px, bold, -1px, uppercase, @white);
+	padding-top: 15px;
+}
+
+.team-position{
+	display: block;
+	overflow: auto;
+
+	a{
+		display: inline-block;
+		.init-font('GothamMedium', 16px, bold, -1px, uppercase, @grey-snow);
+		line-height: 30px;
+		width: 50%;
+		float: left;
+
+		@media @medium{
+			width: 25%;
+		}
+
+		&:hover{
+			.init-rgba-color(@blue-sky, 0.2);
+			background-color: @rgba;
+		}
+	}
+}
+
+.selected{
+	.init-rgba-color(@blue-sky, 0.2);
+	background-color: @rgba;
+	color: @grey-siberian !important;
+}
+
+.player-container{
+	display: block;
+	height: 100%;
+}
+
+.player{
+	display: block;
+	width: 320px;
+	float: left;
+	margin-top: 20px;
+
+	@media @large{
+		width: 33%;
+	}	
+}
+
+.player-image{
+	display: block;
+	position: relative;
+	width: auto;
+	height: 100px;
+	float: left;
+
+	&:before{
+	    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		.init-background-gradient(0deg, @white, rgba(0, 0, 255, 0)); 
+  	}
+
+	img{
+		height: 100%;
+		width: auto;
+	}
+}
+
+.player-informations{
+	display: inline-block;
+	float: left;
+	
+	li:first-child{
+		.init-font('QuicksandBold', 16px, bold, -1px, none, @black);
+		padding-left: 0px;
+	}
+
+	li{
+		.init-font('QuicksandLight', 13px, bold, normal, uppercase, @grey-snow);
+		line-height: 24px;
+		padding-left: 25px;
+		text-align: left;
+		padding-top: 2px;
+	}
+}
+
+.player-birthday{
+	.init-background-image('../img/icons/birthday-icon.png', @repeat: no-repeat, @position: left, @size: 15px auto);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/birthday-icon.png', @repeat: no-repeat, @position: left, @size: 15px auto);
+	}
+}
+.player-club{
+	.init-background-image('../img/icons/team-icon.png', @repeat: no-repeat, @position: left, @size: 15px auto);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/team-icon.png', @repeat: no-repeat, @position: left, @size: 15px auto);
+	}
+}
+
+.player-selection{
+	.init-background-image('../img/icons/selection-icon.png', @repeat: no-repeat, @position: left, @size: 15px auto);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/selection-icon.png', @repeat: no-repeat, @position: left, @size: 15px auto);
+	}
+}

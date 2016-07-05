@@ -1,0 +1,125 @@
+.intro-container{
+	display: block;
+	width: 100%;
+	min-height: 100%;
+	max-height: 100%;
+	.init-background-image('../img/backgrounds/eiffel-tower-background.jpg');
+	text-align: center;
+	position: relative;
+
+	@media @retina{
+		background-image: url('../img/backgrounds-retina/eiffel-tower-background.jpg');
+	}
+
+	@media @medium{
+		min-height: 473px;
+		background-image: url('../img/backgrounds-retina/eiffel-tower-background.jpg');
+		background-position: center center;
+		background-size: 100% auto;
+	}
+}
+
+.intro-about{
+	.init-font('QuicksandLight', 22px, normal, -2px, normal, @white);
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 140px;
+
+	@media @medium{
+		font-size: 24px;
+	}
+
+	@media @large{
+		font-size: 26px;
+	}
+}
+
+.intro-sponsor{
+	display: block;
+	width: 200px;
+	height: 100px;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 115px;
+
+	img{
+		width: 100%;
+		height: 100%;
+	}
+
+	@media @medium{
+		bottom: 60px;
+	}
+}
+
+.intro-ancre-container{
+	display: inline-block;
+	margin-top: 15px;
+	line-height: 70px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+
+	a{
+		padding-top: 11px;
+
+		&:last-child{
+			margin-right: 0px;	
+		}
+	}
+
+	@media @medium{
+		display: none;
+	}
+}
+
+.intro-ancre-player{
+	display: inline-block;
+	.round-element(60px);
+	.white-border-solid(2px);
+	box-shadow: 0px 0px 15px @blue-sky;
+	.init-rgba-color(@blue-sky, 0.6);
+	background-color: @rgba;
+	margin-right: 20px;
+	.init-background-image('../img/icons/t-shirt-icon.png', @repeat: no-repeat, @position: center, @size: 40px);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/t-shirt-icon.png', @repeat: no-repeat, @position: center, @size: 40px);
+	}
+}
+
+.intro-ancre-stadium{
+	display: inline-block;
+	.round-element(60px);
+	border: 2px solid @white;
+	box-shadow: 0px 0px 15px @blue-sea;
+	.init-rgba-color(@blue-sea, 0.6);
+	background-color: @rgba;
+	margin-right: 20px;
+	.init-background-image('../img/icons/stadium-icon.png', @repeat: no-repeat, @position: center, @size: 40px);
+
+	@media @retina{
+		.init-background-image('../img/icons/stadium-icon.png', @repeat: no-repeat, @position: center, @size: 40px);
+	}
+}
+
+.intro-ancre-versus{
+	display: inline-block;
+	.round-element(60px);
+	border: 2px solid @white;
+	box-shadow: 0px 0px 15px @blue-galaxy;
+	.init-rgba-color(@blue-galaxy, 0.6);
+	background-color: @rgba;
+	margin-right: 20px;
+	.init-background-image('../img/icons/versus-icon.png', @repeat: no-repeat, @position: center, @size: 40px);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/versus-icon.png', @repeat: no-repeat, @position: center, @size: 40px);
+	}
+	
+}

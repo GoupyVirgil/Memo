@@ -1,0 +1,135 @@
+.stadium-container{
+	height: auto;
+	background-color: @white;
+	position: relative;
+	text-align: center;
+
+	@media @medium{
+		width: 50%;
+		float: left;
+	}
+
+	.intro-ancre-container{
+		position: static;
+	}
+}
+
+.stadium-header{
+	.init-rgba-color(@blue-sea, 0.7);
+	background-color: @rgba;
+	height: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+.stadium-header-action{
+	display: block;
+	position: absolute;
+	width: 20px;
+	height: 25px;
+	margin-top: 12px;
+}
+
+.stadium-name{
+	.init-font('GothamMedium', 20px, bold, -1px, uppercase, @white);
+	padding-top: 15px;
+}
+
+.stadium-img{
+	display: block;
+	height: 200px;
+	width: 100%;
+	.init-background-image('../img/backgrounds-retina/velodrome-background.png', @repeat: no-repeat, @position: center center, @size: 80% auto);
+  	background-size: cover;
+  	position: relative;
+  	position: absolute;
+  	top: 0;
+  	z-index: 1;
+  
+  	&:before{
+	    content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		.init-background-gradient(0deg, @white, rgba(0, 0, 255, 0)); 
+	  }
+}
+
+.stadium-city{
+	display: inline-block;
+	position: relative;
+	padding-top: 190px;
+	.init-font('QuicksandBold', 18px, bold, 2px, uppercase, @grey-siberian);
+	
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 0;
+		width: 80%;
+		height: 2px;
+		margin: 0 10%;	
+		.init-rgba-color(@grey-siberian, 0.2);
+		background-color: @rgba;	
+	}
+}
+
+.stadium-informations{
+	padding: 15px 20px;
+
+	ul{
+		display: block;
+		width: 100%;
+		text-align: left;
+		margin-top: 15px;
+		.init-font('QuicksandBold', 16px, normal, auto, none, @grey-siberian);
+	}
+
+	li{
+		margin-bottom: 5px;
+		height: 20px;
+		padding-left: 25px;
+		line-height: 20px;
+	}
+
+	img{
+		display: inline-block;
+		vertical-align: middle;
+		width: auto;
+		height: 20px;
+	}
+
+	p{
+		display: block;
+		margin-top: 20px;
+		.init-font('QuicksandLight', 14px, normal, normal, none, @grey-siberian);
+		line-height: normal;
+		text-align: left;
+	}
+}
+
+.stadium-build{
+	.init-background-image('../img/icons/build-icon.png', @repeat: no-repeat, @position: initial, @size: auto 100%);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/build-icon.png', @repeat: no-repeat, @position: initial, @size: auto 100%);
+	}
+}
+
+.stadium-supporters{
+	.init-background-image('../img/icons/supporters-icon.png', @repeat: no-repeat, @position: initial, @size: auto 100%);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/supporters-icon.png', @repeat: no-repeat, @position: initial, @size: auto 100%);
+	}
+}
+
+.stadium-grass{
+	.init-background-image('../img/icons/grass-icon.png', @repeat: no-repeat, @position: initial, @size: auto 100%);
+
+	@media @retina{
+		.init-background-image('../img/icons-retina/grass-icon.png', @repeat: no-repeat, @position: initial, @size: auto 100%);
+	}
+}
