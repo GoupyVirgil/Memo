@@ -3,19 +3,17 @@
 	width: 100%;
 	min-height: 100%;
 	max-height: 100%;
-	.init-background-image('../img/backgrounds/eiffel-tower-background.jpg', no-repeat, center top, cover);
+	.init-background-image('../img/backgrounds/eiffel-tower-background-medium.jpg', no-repeat, center top, cover);
 	text-align: center;
 	position: relative;
 
-	@media @retina{
-		background-image: url('../img/backgrounds-retina/eiffel-tower-background.jpg');
-	}
-
 	@media @medium{
 		min-height: 473px;
-		background-image: url('../img/backgrounds-retina/eiffel-tower-background.jpg');
-		background-position: center center;
-		background-size: 100% auto;
+		.init-background-image('../img/backgrounds/eiffel-tower-background-medium.jpg', no-repeat, center center, 100% auto);
+	}
+
+	@media @large{
+		.init-background-image('../img/backgrounds/eiffel-tower-background-large.jpg', no-repeat, center center, 100% auto);
 	}
 }
 
