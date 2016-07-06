@@ -21,6 +21,7 @@ var processors = [
   autoprefixer()
 ];
 
+//IMAGES
 gulp.task('img:prod', function() {
   return gulp.src('img/**/*')
     .pipe(imagemin({
