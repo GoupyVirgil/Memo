@@ -7,7 +7,7 @@ Please follow the instructions after downloading the project :
 
 in your CLI =>
 
-1. cd "root of the folder"
+1. cd "folder directory"
 2. npm install
 3. gulp prod
 4. gulp
