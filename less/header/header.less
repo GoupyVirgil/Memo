@@ -84,6 +84,10 @@ header{
 		.init-font('GothamMedium', 18px, bold, -2px, uppercase, @grey-siberian);
 		line-height: 30px;
 	} 
+
+	@media @medium{
+		display: none !important;
+	}
 }
 
 .header-cross{
@@ -94,7 +98,7 @@ header{
 	width: 30px;
 	height: 25px;
 	.init-background-image('../img/icons-retina/cross-icon.png', @repeat: no-repeat, @position: center center, @size: auto 25px);
-	
+
 	img{
 		width: auto;
 		height: 100%;
